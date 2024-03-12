@@ -7,7 +7,7 @@ console.log(5 + 7);
 
 let country = "India";
 let continent = "Uttar Pradesh";
-let population = "1.4 Billion";
+let population = 100;
 
 console.log(country);
 console.log(continent);
