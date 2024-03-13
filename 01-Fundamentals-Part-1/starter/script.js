@@ -49,22 +49,41 @@
 
 //operators  --> 13
 
-const currentYear = 2024;
-const myAge = currentYear - 1997;
-const mySisAge = currentYear - 1996;
-console.log(myAge, mySisAge);
-console.log(myAge ** 2);
+// const currentYear = 2024;
+// const myAge = currentYear - 1997;
+// const mySisAge = currentYear - 1996;
+// console.log(myAge, mySisAge);
+// console.log(myAge ** 2);
 
-const firstName = "Radha";
-const lastname = "Krishna";
+// const firstName = "Radha";
+// const lastname = "Krishna";
 
-console.log(firstName + " " + lastname);
+// console.log(firstName + " " + lastname);
 
-let x = 10;
-x = x * 2;
-console.log(x);
-x++;
-console.log(x);
+// let x = 10;
+// x = x * 2;
+// console.log(x);
+// x++;
+// console.log(x);
 
-console.log(myAge < mySisAge);
-console.log(currentYear - 1997 > currentYear - 1996);
+// console.log(myAge < mySisAge);
+// console.log(currentYear - 1997 > currentYear - 1996);
+
+// const avgAge = (myAge + mySisAge) / 2;
+// console.log(avgAge);
+
+/* Write your code below. Good luck! 🙂 */
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+
+console.log(BMIMark);
+console.log(BMIJohn);
+
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(markHigherBMI);
