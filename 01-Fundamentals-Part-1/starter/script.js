@@ -74,16 +74,24 @@
 
 /* Write your code below. Good luck! 🙂 */
 
-const massMark = 78;
-const heightMark = 1.69;
-const massJohn = 92;
-const heightJohn = 1.95;
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
 
-const BMIMark = massMark / (heightMark * heightMark);
-const BMIJohn = massJohn / (heightJohn * heightJohn);
+// const BMIMark = massMark / (heightMark * heightMark);
+// const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-console.log(BMIMark);
-console.log(BMIJohn);
+// console.log(BMIMark);
+// console.log(BMIJohn);
 
-const markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log(markHigherBMI);
+
+let firstNameMine = "prakash";
+let sentence = "my name is" + " " + firstNameMine + " ";
+console.log(sentence);
+
+// use template litrals
+let litSentence = `my name is ${firstNameMine} .`;
+console.log(litSentence);
