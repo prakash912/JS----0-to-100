@@ -43,6 +43,28 @@
 
 // const herName;
 
-var myBirthDay = "Tuesday";
-myBirthDay = "Wednesday";
-console.log(myBirthDay);
+// var myBirthDay = "Tuesday";
+// myBirthDay = "Wednesday";
+// console.log(myBirthDay);
+
+//operators  --> 13
+
+const currentYear = 2024;
+const myAge = currentYear - 1997;
+const mySisAge = currentYear - 1996;
+console.log(myAge, mySisAge);
+console.log(myAge ** 2);
+
+const firstName = "Radha";
+const lastname = "Krishna";
+
+console.log(firstName + " " + lastname);
+
+let x = 10;
+x = x * 2;
+console.log(x);
+x++;
+console.log(x);
+
+console.log(myAge < mySisAge);
+console.log(currentYear - 1997 > currentYear - 1996);
