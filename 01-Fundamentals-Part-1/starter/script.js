@@ -149,25 +149,38 @@
 
 // = , == , ===
 
-let age = "26";
-if (age == 26) {
-  console.log("your age is 26 : loose");
-} else {
-  console.log("your age wrong : loose");
-}
+// let age = "26";
+// if (age == 26) {
+//   console.log("your age is 26 : loose");
+// } else {
+//   console.log("your age wrong : loose");
+// }
 
-let ageLast = "26";
-if (ageLast === 26) {
-  console.log("your age is 26 : tight");
-} else {
-  console.log("your age wrong : tight");
-}
+// let ageLast = "26";
+// if (ageLast === 26) {
+//   console.log("your age is 26 : tight");
+// } else {
+//   console.log("your age wrong : tight");
+// }
 
-let intputValue = Number(prompt("enter the no to check"));
-if (intputValue === 9) {
-  console.log("no is 9");
-} else if (intputValue == 5) {
-  console.log("no is 5");
+// let intputValue = Number(prompt("enter the no to check"));
+// if (intputValue === 9) {
+//   console.log("no is 9");
+// } else if (intputValue == 5) {
+//   console.log("no is 5");
+// } else {
+//   console.log("nor 9 nor 5");
+// }
+
+// challange 3
+
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("Dolphins win the trophy");
+} else if (scoreKoalas > scoreDolphins) {
+  console.log("Koalas win the trophy");
 } else {
-  console.log("nor 9 nor 5");
+  console.log("Both win the trophy");
 }
