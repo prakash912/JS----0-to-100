@@ -132,17 +132,42 @@
 
 // truthy and falsy value
 
-console.log(Boolean(""));
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean(null));
-console.log(Boolean("prakash"));
-console.log(Boolean({}));
-console.log(Boolean(NaN));
+// console.log(Boolean(""));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean(null));
+// console.log(Boolean("prakash"));
+// console.log(Boolean({}));
+// console.log(Boolean(NaN));
 
-const money = 0;
-if (money) {
-  console.log("you ca spend");
+// const money = 0;
+// if (money) {
+//   console.log("you ca spend");
+// } else {
+//   console.log("paisa kamao");
+// }
+
+// = , == , ===
+
+let age = "26";
+if (age == 26) {
+  console.log("your age is 26 : loose");
 } else {
-  console.log("paisa kamao");
+  console.log("your age wrong : loose");
+}
+
+let ageLast = "26";
+if (ageLast === 26) {
+  console.log("your age is 26 : tight");
+} else {
+  console.log("your age wrong : tight");
+}
+
+let intputValue = Number(prompt("enter the no to check"));
+if (intputValue === 9) {
+  console.log("no is 9");
+} else if (intputValue == 5) {
+  console.log("no is 5");
+} else {
+  console.log("nor 9 nor 5");
 }
