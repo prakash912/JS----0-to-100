@@ -174,13 +174,26 @@
 
 // challange 3
 
-const scoreDolphins = (96 + 108 + 89) / 3;
-const scoreKoalas = (88 + 91 + 110) / 3;
+// const scoreDolphins = (96 + 108 + 89) / 3;
+// const scoreKoalas = (88 + 91 + 110) / 3;
 
-if (scoreDolphins > scoreKoalas) {
-  console.log("Dolphins win the trophy");
-} else if (scoreKoalas > scoreDolphins) {
-  console.log("Koalas win the trophy");
-} else {
-  console.log("Both win the trophy");
+// if (scoreDolphins > scoreKoalas) {
+//   console.log("Dolphins win the trophy");
+// } else if (scoreKoalas > scoreDolphins) {
+//   console.log("Koalas win the trophy");
+// } else {
+//   console.log("Both win the trophy");
+// }
+
+const day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Today Is Monday");
+    break;
+  case "tuesday":
+    console.log("today is tuesday");
+    break;
+  default:
+    console.log("Not a valid day");
+    break;
 }
