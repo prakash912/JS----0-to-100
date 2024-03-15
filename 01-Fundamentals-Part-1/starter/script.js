@@ -120,12 +120,29 @@
 // }
 
 // type conversion
-const inputYear = "1997";
-console.log(inputYear + 5);
-console.log(Number(inputYear) + 5);
-console.log(Number("prakash"));
-console.log(typeof Number("prakash"));
+// const inputYear = "1997";
+// console.log(inputYear + 5);
+// console.log(Number(inputYear) + 5);
+// console.log(Number("prakash"));
+// console.log(typeof Number("prakash"));
 
-// type coersion
-console.log("5" + 5);
-console.log(5 - "2");
+// // type coersion
+// console.log("5" + 5);
+// console.log(5 - "2");
+
+// truthy and falsy value
+
+console.log(Boolean(""));
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean("prakash"));
+console.log(Boolean({}));
+console.log(Boolean(NaN));
+
+const money = 0;
+if (money) {
+  console.log("you ca spend");
+} else {
+  console.log("paisa kamao");
+}
