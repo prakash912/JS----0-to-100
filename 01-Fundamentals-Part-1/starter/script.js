@@ -185,15 +185,29 @@
 //   console.log("Both win the trophy");
 // }
 
-const day = "Monday";
-switch (day) {
-  case "Monday":
-    console.log("Today Is Monday");
-    break;
-  case "tuesday":
-    console.log("today is tuesday");
-    break;
-  default:
-    console.log("Not a valid day");
-    break;
-}
+//switch statement
+
+// const day = "Monday";
+// switch (day) {
+//   case "Monday":
+//     console.log("Today Is Monday");
+//     break;
+//   case "tuesday":
+//     console.log("today is tuesday");
+//     break;
+//   default:
+//     console.log("Not a valid day");
+//     break;
+// }
+
+// ternery operator
+// challange - 4
+
+const bill = 275;
+
+/* Write your code below. Good luck! 🙂 */
+
+const tip = bill >= 50 && bill <= 300 ? (bill * 15) / 100 : (bill * 20) / 100;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
