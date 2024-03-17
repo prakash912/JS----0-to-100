@@ -26,55 +26,70 @@
 
 // Arrow Function
 
-const calcAgeRetire = (birthyear, firstName) => {
-  const age = 2024 - birthyear;
-  const retire = 65 - age;
-  return `${firstName} retire in ${retire}`;
-};
+// const calcAgeRetire = (birthyear, firstName) => {
+//   const age = 2024 - birthyear;
+//   const retire = 65 - age;
+//   return `${firstName} retire in ${retire}`;
+// };
 
-console.log(calcAgeRetire(1996, "prakash"));
+// console.log(calcAgeRetire(1996, "prakash"));
 
-const cutFruit = (fruit) => {
-  return fruit * 4;
-};
+// const cutFruit = (fruit) => {
+//   return fruit * 4;
+// };
 
-const fruitMaker = (apples, orange) => {
-  const applePiece = cutFruit(apples);
-  const orangePiece = cutFruit(orange);
-  return `Juice make by ${applePiece} pices of apple and orange ${orangePiece} pices`;
-};
+// const fruitMaker = (apples, orange) => {
+//   const applePiece = cutFruit(apples);
+//   const orangePiece = cutFruit(orange);
+//   return `Juice make by ${applePiece} pices of apple and orange ${orangePiece} pices`;
+// };
 
-console.log(fruitMaker(4, 5));
+// console.log(fruitMaker(4, 5));
 
 //coding exercise --5
 
 /* Write your code below. Good luck! 🙂 */
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
+// const calcAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(44, 23, 71);
+// const scoreDolphins = calcAverage(44, 23, 71);
+// const scoreKoalas = calcAverage(44, 23, 71);
 
-const checkWinner = (avgScore1, avgScore2) => {
-  if (avgScore1 > avgScore2 && avgScore1 >= 2 * avgScore2) {
-    return console.log(`Dolphins win (${avgScore1} vs. ${avgScore2})`);
-  } else if (avgScore2 > avgScore1 && avgScore2 >= 2 * avgScore1) {
-    return console.log(`Koalas win (${avgScore2} vs. ${avgScore1})`);
-  } else {
-    return console.log(`No team wins...`);
-  }
-};
-checkWinner(scoreDolphins, scoreKoalas);
+// const checkWinner = (avgScore1, avgScore2) => {
+//   if (avgScore1 > avgScore2 && avgScore1 >= 2 * avgScore2) {
+//     return console.log(`Dolphins win (${avgScore1} vs. ${avgScore2})`);
+//   } else if (avgScore2 > avgScore1 && avgScore2 >= 2 * avgScore1) {
+//     return console.log(`Koalas win (${avgScore2} vs. ${avgScore1})`);
+//   } else {
+//     return console.log(`No team wins...`);
+//   }
+// };
+// checkWinner(scoreDolphins, scoreKoalas);
 
 // Array
 
-const friends = ["prakash", "ranjan", "rai"];
+// const friends = ["prakash", "ranjan", "rai"];
 
-friends[2] = "ram";
-const calcAgeNew = (birthyear) => {
-  return 2024 - birthyear;
+// friends[2] = "ram";
+// const calcAgeNew = (birthyear) => {
+//   return 2024 - birthyear;
+// };
+// const agesForCheck = [calcAgeNew(1996), "prakash", friends];
+// console.log(agesForCheck);
+
+// coding exercise -6
+
+const calcTip = (billVal) => {
+  if (billVal >= 50 && billVal <= 300) {
+    return (billVal * 15) / 100;
+  } else {
+    return (billVal * 20) / 100;
+  }
 };
-const agesForCheck = [calcAgeNew(1996), "prakash", friends];
-console.log(agesForCheck);
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
