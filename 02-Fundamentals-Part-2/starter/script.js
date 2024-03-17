@@ -11,15 +11,25 @@
 
 // functions
 
-function fruitProcesser(apple, oranges) {
-  const juice = `Jusice with ${apple} apple and ${oranges} oranges`;
-  return juice;
-}
-console.log(fruitProcesser(5, 0));
+// function fruitProcesser(apple, oranges) {
+//   const juice = `Jusice with ${apple} apple and ${oranges} oranges`;
+//   return juice;
+// }
+// console.log(fruitProcesser(5, 0));
 
-// function expression
+// // function expression
 
-const calcAge = function (birthYear) {
-  return 2024 - birthYear;
+// const calcAge = function (birthYear) {
+//   return 2024 - birthYear;
+// };
+// console.log(calcAge(1998));
+
+// Arrow Function
+
+const calcAgeRetire = (birthyear, firstName) => {
+  const age = 2024 - birthyear;
+  const retire = 65 - age;
+  return `${firstName} retire in ${retire}`;
 };
-console.log(calcAge(1998));
+
+console.log(calcAgeRetire(1996, "prakash"));
