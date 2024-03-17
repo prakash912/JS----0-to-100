@@ -67,3 +67,14 @@ const checkWinner = (avgScore1, avgScore2) => {
   }
 };
 checkWinner(scoreDolphins, scoreKoalas);
+
+// Array
+
+const friends = ["prakash", "ranjan", "rai"];
+
+friends[2] = "ram";
+const calcAgeNew = (birthyear) => {
+  return 2024 - birthyear;
+};
+const agesForCheck = [calcAgeNew(1996), "prakash", friends];
+console.log(agesForCheck);
