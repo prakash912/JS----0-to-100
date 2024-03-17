@@ -33,3 +33,15 @@ const calcAgeRetire = (birthyear, firstName) => {
 };
 
 console.log(calcAgeRetire(1996, "prakash"));
+
+const cutFruit = (fruit) => {
+  return fruit * 4;
+};
+
+const fruitMaker = (apples, orange) => {
+  const applePiece = cutFruit(apples);
+  const orangePiece = cutFruit(orange);
+  return `Juice make by ${applePiece} pices of apple and orange ${orangePiece} pices`;
+};
+
+console.log(fruitMaker(4, 5));
