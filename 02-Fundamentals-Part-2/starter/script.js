@@ -45,3 +45,25 @@ const fruitMaker = (apples, orange) => {
 };
 
 console.log(fruitMaker(4, 5));
+
+//coding exercise --5
+
+/* Write your code below. Good luck! 🙂 */
+
+const calcAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(44, 23, 71);
+
+const checkWinner = (avgScore1, avgScore2) => {
+  if (avgScore1 > avgScore2 && avgScore1 >= 2 * avgScore2) {
+    return console.log(`Dolphins win (${avgScore1} vs. ${avgScore2})`);
+  } else if (avgScore2 > avgScore1 && avgScore2 >= 2 * avgScore1) {
+    return console.log(`Koalas win (${avgScore2} vs. ${avgScore1})`);
+  } else {
+    return console.log(`No team wins...`);
+  }
+};
+checkWinner(scoreDolphins, scoreKoalas);
