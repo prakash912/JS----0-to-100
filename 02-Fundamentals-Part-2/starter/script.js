@@ -81,15 +81,36 @@
 
 // coding exercise -6
 
-const calcTip = (billVal) => {
-  if (billVal >= 50 && billVal <= 300) {
-    return (billVal * 15) / 100;
-  } else {
-    return (billVal * 20) / 100;
-  }
+// const calcTip = (billVal) => {
+//   if (billVal >= 50 && billVal <= 300) {
+//     return (billVal * 15) / 100;
+//   } else {
+//     return (billVal * 20) / 100;
+//   }
+// };
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// Objects
+
+const collectAllData = {
+  firstName: "prakash",
+  lastName: "rai",
+  city: "Ghazipur",
+  birthYear: 1998 - 2024,
+  friends: ["viviek", "rai", "ram"],
 };
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(collectAllData);
 
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(
+  `Jonas first name is ${collectAllData.firstName} and he has ${collectAllData.friends.length} and his best friend is ${collectAllData.friends[0]}`
+);
+
+collectAllData.villageName = "Revatipur";
+collectAllData["mobNo"] = 9120000709;
+
+console.log(collectAllData);
