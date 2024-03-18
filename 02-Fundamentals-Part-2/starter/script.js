@@ -100,8 +100,15 @@ const collectAllData = {
   firstName: "prakash",
   lastName: "rai",
   city: "Ghazipur",
-  birthYear: 1998 - 2024,
+  birthYear: 1997,
   friends: ["viviek", "rai", "ram"],
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+  getSummery: function () {
+    return `${this.firstName} whic has age of ${this.calcAge()}`;
+  },
 };
 
 console.log(collectAllData);
@@ -113,4 +120,41 @@ console.log(
 collectAllData.villageName = "Revatipur";
 collectAllData["mobNo"] = 9120000709;
 
-console.log(collectAllData);
+console.log(collectAllData.calcAge());
+console.log(collectAllData.getSummery());
+
+//coding exercise - 7
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+if (mark.calcBMI() > john.calcBMI()) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${
+      john.fullName
+    }'s (${john.calcBMI()})!`
+  );
+} else {
+  console.log(
+    `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${
+      mark.fullName
+    }'s (${mark.calcBMI()})!`
+  );
+}
