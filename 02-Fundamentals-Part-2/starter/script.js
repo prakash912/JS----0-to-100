@@ -158,3 +158,9 @@ if (mark.calcBMI() > john.calcBMI()) {
     }'s (${mark.calcBMI()})!`
   );
 }
+
+// for Loop
+
+for (let i = 0; i <= 10; i++) {
+  console.log(`Lifting weight for ${i}`);
+}
