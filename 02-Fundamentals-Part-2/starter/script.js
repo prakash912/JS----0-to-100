@@ -96,71 +96,89 @@
 
 // Objects
 
-const collectAllData = {
-  firstName: "prakash",
-  lastName: "rai",
-  city: "Ghazipur",
-  birthYear: 1997,
-  friends: ["viviek", "rai", "ram"],
-  calcAge: function () {
-    this.age = 2024 - this.birthYear;
-    return this.age;
-  },
-  getSummery: function () {
-    return `${this.firstName} whic has age of ${this.calcAge()}`;
-  },
-};
+// const collectAllData = {
+//   firstName: "prakash",
+//   lastName: "rai",
+//   city: "Ghazipur",
+//   birthYear: 1997,
+//   friends: ["viviek", "rai", "ram"],
+//   calcAge: function () {
+//     this.age = 2024 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummery: function () {
+//     return `${this.firstName} whic has age of ${this.calcAge()}`;
+//   },
+// };
 
-console.log(collectAllData);
+// console.log(collectAllData);
 
-console.log(
-  `Jonas first name is ${collectAllData.firstName} and he has ${collectAllData.friends.length} and his best friend is ${collectAllData.friends[0]}`
-);
+// console.log(
+//   `Jonas first name is ${collectAllData.firstName} and he has ${collectAllData.friends.length} and his best friend is ${collectAllData.friends[0]}`
+// );
 
-collectAllData.villageName = "Revatipur";
-collectAllData["mobNo"] = 9120000709;
+// collectAllData.villageName = "Revatipur";
+// collectAllData["mobNo"] = 9120000709;
 
-console.log(collectAllData.calcAge());
-console.log(collectAllData.getSummery());
+// console.log(collectAllData.calcAge());
+// console.log(collectAllData.getSummery());
 
-//coding exercise - 7
+// //coding exercise - 7
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  },
-};
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   },
+// };
 
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  },
-};
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi;
+//   },
+// };
 
-if (mark.calcBMI() > john.calcBMI()) {
-  console.log(
-    `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${
-      john.fullName
-    }'s (${john.calcBMI()})!`
-  );
-} else {
-  console.log(
-    `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${
-      mark.fullName
-    }'s (${mark.calcBMI()})!`
-  );
+// if (mark.calcBMI() > john.calcBMI()) {
+//   console.log(
+//     `${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${
+//       john.fullName
+//     }'s (${john.calcBMI()})!`
+//   );
+// } else {
+//   console.log(
+//     `${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${
+//       mark.fullName
+//     }'s (${mark.calcBMI()})!`
+//   );
+// }
+
+// // for Loop
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log(`Lifting weight for ${i}`);
+// }
+
+// use of for loop
+
+const jonas = ["prakash", "rai", 2024, true, ["shivam", "suhani", "anand"]];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i]);
+  types.push(typeof jonas[i]);
 }
 
-// for Loop
+console.log(types);
 
-for (let i = 0; i <= 10; i++) {
-  console.log(`Lifting weight for ${i}`);
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] !== "string") continue;
+  console.log(jonas[i], typeof jonas[i]);
 }
