@@ -169,16 +169,38 @@
 
 const jonas = ["prakash", "rai", 2024, true, ["shivam", "suhani", "anand"]];
 
-const types = [];
+// const types = [];
 
-for (let i = 0; i < jonas.length; i++) {
-  console.log(jonas[i]);
-  types.push(typeof jonas[i]);
-}
+// for (let i = 0; i < jonas.length; i++) {
+//   console.log(jonas[i]);
+//   types.push(typeof jonas[i]);
+// }
 
-console.log(types);
+// console.log(types);
 
-for (let i = 0; i < jonas.length; i++) {
-  if (typeof jonas[i] !== "string") continue;
-  console.log(jonas[i], typeof jonas[i]);
+// for (let i = 0; i < jonas.length; i++) {
+//   if (typeof jonas[i] !== "string") continue;
+//   console.log(jonas[i], typeof jonas[i]);
+// }
+
+// backword loops
+
+// for (let i = jonas.length - 1; i >= 0; i--) {
+//   console.log(`${i} ${jonas[i]}`);
+// }
+
+// // nested loop
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`-------- Exercise ${exercise} ------------`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise ${exercise} : Make ${rep} rep`);
+//   }
+// }
+
+//while loop
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a dice ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
 }
