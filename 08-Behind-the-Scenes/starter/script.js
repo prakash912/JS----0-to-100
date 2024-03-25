@@ -36,5 +36,60 @@ function calcAge(birthYear) {
 
 const firstName = 'Jonas';
 calcAge(1991);
-console.log(age);
-printAge();
+// console.log(age);
+// printAge();
+
+console.log(x);
+// console.log(y);
+// console.log(z);
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+console.log(x === window.x);
+
+console.log(add(3, 7));
+// console.log(addEx(3, 7));
+
+function add(a, b) {
+  return a + b;
+}
+
+const addEx = function (a, b) {
+  return a + b;
+};
+
+// const addArrow = (a, b) => {
+//   return a + b;
+// };
+
+console.log(this);
+
+function add() {
+  console.log(this);
+}
+
+const addArrow = () => {
+  console.log(this);
+};
+
+add();
+addArrow();
+
+const jonas = {
+  year: 2017,
+  calcAge: function () {
+    return 2024 - this.year;
+  },
+};
+
+console.log(jonas.calcAge());
+
+const mili = {
+  year: 2022,
+};
+
+mili.calcAge = jonas.calcAge;
+
+console.log(mili.calcAge(), 'mili');
