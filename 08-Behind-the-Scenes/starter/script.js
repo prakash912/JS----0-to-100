@@ -77,17 +77,17 @@
 // add();
 // addArrow();
 
-const jonas = {
-  year: 2017,
-  calcAge: function () {
-    const calcAgeArrow = () => {
-      console.log(this.year, 'this');
-      return 2050 - this.year;
-    };
-    return calcAgeArrow();
-  },
-};
-console.log(jonas.calcAge());
+// const jonas = {
+//   year: 2017,
+//   calcAge: function () {
+//     const calcAgeArrow = () => {
+//       console.log(this.year, 'this');
+//       return 2050 - this.year;
+//     };
+//     return calcAgeArrow();
+//   },
+// };
+// console.log(jonas.calcAge());
 // console.log(jonas.calcAgeArrow());
 
 // const mili = {
@@ -114,3 +114,23 @@ console.log(jonas.calcAge());
 // mili.calcAge = jonas.calcAge;
 
 // console.log(mili.calcAge(), 'mili');
+
+//premitive type
+
+let age = 30;
+let oldAge = age;
+age = 50;
+
+console.log(age, 'age');
+console.log(oldAge, 'oldAge');
+
+//refrence type
+const me = {
+  firstname: 'prakash',
+};
+
+const friend = me;
+friend.firstname = 'rai';
+
+console.log('me', me);
+console.log(friend, 'friend');
