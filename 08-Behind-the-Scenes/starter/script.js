@@ -2,94 +2,115 @@
 
 // Scoping in Practice
 
-function calcAge(birthYear) {
-  const age = 2037 - birthYear;
+// function calcAge(birthYear) {
+//   const age = 2037 - birthYear;
 
-  function printAge() {
-    let output = `${firstName}, you are ${age}, born in ${birthYear}`;
-    console.log(output);
+//   function printAge() {
+//     let output = `${firstName}, you are ${age}, born in ${birthYear}`;
+//     console.log(output);
 
-    if (birthYear >= 1981 && birthYear <= 1996) {
-      var millenial = true;
-      // Creating NEW variable with same name as outer scope's variable
-      const firstName = 'Steven';
+//     if (birthYear >= 1981 && birthYear <= 1996) {
+//       var millenial = true;
+//       // Creating NEW variable with same name as outer scope's variable
+//       const firstName = 'Steven';
 
-      // Reasssigning outer scope's variable
-      output = 'NEW OUTPUT!';
+//       // Reasssigning outer scope's variable
+//       output = 'NEW OUTPUT!';
 
-      const str = `Oh, and you're a millenial, ${firstName}`;
-      console.log(str);
+//       const str = `Oh, and you're a millenial, ${firstName}`;
+//       console.log(str);
 
-      function add(a, b) {
-        return a + b;
-      }
-    }
-    // console.log(str);
-    console.log(millenial);
-    // console.log(add(2, 3));
-    console.log(output);
-  }
-  printAge();
+//       function add(a, b) {
+//         return a + b;
+//       }
+//     }
+//     // console.log(str);
+//     console.log(millenial);
+//     // console.log(add(2, 3));
+//     console.log(output);
+//   }
+//   printAge();
 
-  return age;
-}
+//   return age;
+// }
 
-const firstName = 'Jonas';
-calcAge(1991);
+// const firstName = 'Jonas';
+// calcAge(1991);
 // console.log(age);
 // printAge();
 
-console.log(x);
+// console.log(x);
 // console.log(y);
 // console.log(z);
 
-var x = 1;
-let y = 2;
-const z = 3;
+// var x = 1;
+// let y = 2;
+// const z = 3;
 
-console.log(x === window.x);
+// console.log(x === window.x);
 
-console.log(add(3, 7));
-// console.log(addEx(3, 7));
+// console.log(add(3, 7));
+// // console.log(addEx(3, 7));
 
-function add(a, b) {
-  return a + b;
-}
+// function add(a, b) {
+//   return a + b;
+// }
 
-const addEx = function (a, b) {
-  return a + b;
-};
+// const addEx = function (a, b) {
+//   return a + b;
+// };
 
 // const addArrow = (a, b) => {
 //   return a + b;
 // };
 
-console.log(this);
+// console.log(this);
 
-function add() {
-  console.log(this);
-}
+// function add() {
+//   console.log(this);
+// }
 
-const addArrow = () => {
-  console.log(this);
-};
+// const addArrow = () => {
+//   console.log(this);
+// };
 
-add();
-addArrow();
+// add();
+// addArrow();
 
 const jonas = {
   year: 2017,
   calcAge: function () {
-    return 2024 - this.year;
+    const calcAgeArrow = () => {
+      console.log(this.year, 'this');
+      return 2050 - this.year;
+    };
+    return calcAgeArrow();
   },
 };
-
 console.log(jonas.calcAge());
+// console.log(jonas.calcAgeArrow());
 
-const mili = {
-  year: 2022,
-};
+// const mili = {
+//   year: 2022,
+// };
+// console.log(jonas.calcAge());
 
-mili.calcAge = jonas.calcAge;
+// const mili = {
+//   year: 2022,
+// };
 
-console.log(mili.calcAge(), 'mili');
+// mili.calcAge = jonas.calcAge;
+
+// console.log(mili.calcAge(), 'mili');
+// mili.calcAge = jonas.calcAge;
+
+// console.log(mili.calcAge(), 'mili');
+// console.log(jonas.calcAge());
+
+// const mili = {
+//   year: 2022,
+// };
+
+// mili.calcAge = jonas.calcAge;
+
+// console.log(mili.calcAge(), 'mili');
