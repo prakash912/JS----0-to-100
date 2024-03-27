@@ -272,31 +272,38 @@ const books = [
   },
 ];
 
-const [firstBook] = books;
-const { title, author, ISBN } = firstBook;
-console.log(title, author, ISBN);
-let tags = books[0];
-({ keywords: tags } = books[0]);
-// console.log(tags, 'tags');
-const { language, programmingLanguage = 'unknown' } = books[6];
+const bookAuthors = [...books[0].author, ...books[1].author];
+// console.log(bookAuthors);
+function spellWord(str) {
+  console.log(...str, ' ');
+}
+spellWord('prakash');
+
+// const [firstBook] = books;
+// const { title, author, ISBN } = firstBook;
+// console.log(title, author, ISBN);
+// let tags = books[0];
+// ({ keywords: tags } = books[0]);
+// // console.log(tags, 'tags');
+// const { language, programmingLanguage = 'unknown' } = books[6];
 // console.log(programmingLanguage);
 
-let booTitle = 'unknown';
-let bookAuthor = 'unknown';
-({ title: booTitle, author: bookAuthor } = books[0]);
+// let booTitle = 'unknown';
+// let bookAuthor = 'unknown';
+// ({ title: booTitle, author: bookAuthor } = books[0]);
 // console.log(bookAuthor);
-const {
-  thirdParty: {
-    goodreads: { rating: bookRating },
-  },
-} = books[0];
-console.log(bookRating);
+// const {
+//   thirdParty: {
+//     goodreads: { rating: bookRating },
+//   },
+// } = books[0];
+// console.log(bookRating);
 
-function printBookInfo({ title, author, year = 'unknown' }) {
-  console.log(`${title} by ${author},${year}`);
-}
+// function printBookInfo({ title, author, year = 'unknown' }) {
+//   console.log(`${title} by ${author},${year}`);
+// }
 
-printBookInfo({ title: 'Algo', author: 'robert' });
+// printBookInfo({ title: 'Algo', author: 'robert' });
 
 // console.log(firstBook);
 // console.log(secondBook);
