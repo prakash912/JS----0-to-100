@@ -272,12 +272,22 @@ const books = [
   },
 ];
 
-const bookAuthors = [...books[0].author, ...books[1].author];
-// console.log(bookAuthors);
-function spellWord(str) {
-  console.log(...str, ' ');
+// const [mainKeyword, ...rest] = books[0].keywords;
+// console.log(mainKeyword);
+// console.log(rest);
+
+function printBookAuthorsCount(title, ...authors) {
+  console.log(`The book "${title}" has ${authors.length} authors`);
 }
-spellWord('prakash');
+
+printBookAuthorsCount('algo', 'sita', 'ram');
+
+// const bookAuthors = [...books[0].author, ...books[1].author];
+// // console.log(bookAuthors);
+// function spellWord(str) {
+//   console.log(...str, ' ');
+// }
+// spellWord('prakash');
 
 // const [firstBook] = books;
 // const { title, author, ISBN } = firstBook;
