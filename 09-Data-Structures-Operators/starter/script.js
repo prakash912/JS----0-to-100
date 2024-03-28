@@ -272,15 +272,28 @@ const books = [
   },
 ];
 
+function hasExamplesInJava(bookData) {
+  console.log(bookData.programmingLanguage === 'Java' || 'no data available');
+}
+function checkBook() {
+  for (let i = 0; i < books.length; i++) {
+    books[i].onlineContent &&
+      console.log(`"${books[i].title}" provides online content`);
+  }
+}
+
+checkBook();
+
+hasExamplesInJava(books[0]);
 // const [mainKeyword, ...rest] = books[0].keywords;
 // console.log(mainKeyword);
 // console.log(rest);
 
-function printBookAuthorsCount(title, ...authors) {
-  console.log(`The book "${title}" has ${authors.length} authors`);
-}
+// function printBookAuthorsCount(title, ...authors) {
+//   console.log(`The book "${title}" has ${authors.length} authors`);
+// }
 
-printBookAuthorsCount('algo', 'sita', 'ram');
+// printBookAuthorsCount('algo', 'sita', 'ram');
 
 // const bookAuthors = [...books[0].author, ...books[1].author];
 // // console.log(bookAuthors);
