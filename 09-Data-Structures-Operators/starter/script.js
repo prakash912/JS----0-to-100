@@ -277,8 +277,13 @@ function hasExamplesInJava(bookData) {
 }
 function checkBook() {
   for (let i = 0; i < books.length; i++) {
-    books[i].onlineContent ??
-      console.log(`"${books[i].title}" provides online content`);
+    books[i].onlineContent = books[i].edition || 1;
+  }
+}
+
+function checkBook() {
+  for (let i = 0; i < books.length; i++) {
+    books[i].highlighted &&= books[i].thirdParty?.goodreads.rating < 4.2;
   }
 }
 
