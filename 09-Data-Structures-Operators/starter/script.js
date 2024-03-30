@@ -272,6 +272,12 @@ const books = [
   },
 ];
 
+const getFirstKeyword = book => {
+  console.log(book?.keywords?.[0] ?? 'no keyword found');
+};
+
+getFirstKeyword(books[8]);
+
 //for of loop
 // let pageSum = 0;
 // for (const item of books) {
@@ -279,21 +285,21 @@ const books = [
 // }
 // console.log(pageSum, 'page');
 
-let allAuthors = [];
-for (const item of books) {
-  if (typeof item.author === 'string') {
-    allAuthors.push(item.author);
-  } else {
-    for (const nesItem of item.author) {
-      allAuthors.push(nesItem);
-    }
-  }
-}
+// let allAuthors = [];
+// for (const item of books) {
+//   if (typeof item.author === 'string') {
+//     allAuthors.push(item.author);
+//   } else {
+//     for (const nesItem of item.author) {
+//       allAuthors.push(nesItem);
+//     }
+//   }
+// }
 
-console.log(allAuthors, 'all');
-for (const it of allAuthors.entries()) {
-  console.log(`${it[0] + 1}: ${it[1]}`);
-}
+// console.log(allAuthors, 'all');
+// for (const it of allAuthors.entries()) {
+//   console.log(`${it[0] + 1}: ${it[1]}`);
+// }
 
 // // function hasExamplesInJava(bookData) {
 // //   console.log(bookData.programmingLanguage === 'Java' || 'no data available');
