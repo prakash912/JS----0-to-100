@@ -272,11 +272,24 @@ const books = [
   },
 ];
 
-const getFirstKeyword = book => {
-  console.log(book?.keywords?.[0] ?? 'no keyword found');
-};
+const entries = [];
+for (const bookEn of Object.keys(books[0].thirdParty.goodreads)) {
+  entries.push([bookEn]);
+}
 
-getFirstKeyword(books[8]);
+for (const [index, value] of Object.values(
+  books[2].thirdParty.goodreads
+).entries()) {
+  console.log(entries[index]);
+  entries[index].push(value);
+}
+console.log(entries);
+
+// const getFirstKeyword = book => {
+//   console.log(book?.keywords?.[0] ?? 'no keyword found');
+// };
+
+// getFirstKeyword(books[8]);
 
 //for of loop
 // let pageSum = 0;
