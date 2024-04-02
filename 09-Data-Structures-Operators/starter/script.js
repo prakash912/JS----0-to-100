@@ -830,10 +830,48 @@ const books = [
 //   console.log(`the author of this book is known ${bookMap.get('author')}`);
 // }
 
-const firstBookMap = new Map(Object.entries(books[0]));
-for (const [key, value] of firstBookMap) {
-  // console.log(`${key} --> ${value}`);
-  if (typeof value === 'number') {
-    console.log(key);
+// const firstBookMap = new Map(Object.entries(books[0]));
+// for (const [key, value] of firstBookMap) {
+//   // console.log(`${key} --> ${value}`);
+//   if (typeof value === 'number') {
+//     console.log(key);
+//   }
+// }
+
+const gameEvents = new Map([
+  [17, '⚽️ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽️ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽️ GOAL'],
+  [80, '⚽️ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+// 1-->
+
+const events = new Set();
+for (const [key, value] of gameEvents) {
+  events.add(value);
+}
+console.log(events);
+const all = [...events];
+console.log(all);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+const average = 90 / gameEvents.size;
+console.log(`An event happend, on average, every ${average} minutes`);
+
+for (const [key, value] of gameEvents) {
+  if (key <= 45) {
+    console.log(`[Firest Half] ${key}: ${value}`);
+  } else {
+    console.log(`[Second Half] ${key}: ${value}`);
   }
 }
