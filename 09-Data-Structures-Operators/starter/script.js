@@ -875,13 +875,44 @@ const books = [
   },
 ];
 
-const newString = books[0].ISBN;
-console.log(newString[6]);
-const quote =
-  'A computer once beat me at chess, but it was no match for me at kick boxing';
-console.log(quote.indexOf('chess'));
-console.log(quote.slice(quote.indexOf('boxing')));
-const isContributor = con => {
-  return con.lastIndexOf('(Contributor)') !== -1;
-};
-console.log(isContributor('Julie Sussman (Contributor)'));
+// const newString = books[0].ISBN;
+// console.log(newString[6]);
+// const quote =
+//   'A computer once beat me at chess, but it was no match for me at kick boxing';
+// console.log(quote.indexOf('chess'));
+// console.log(quote.slice(quote.indexOf('boxing')));
+// const isContributor = con => {
+//   return con.lastIndexOf('(Contributor)') !== -1;
+// };
+// console.log(isContributor('Julie Sussman (Contributor)'));
+
+function normalizeAuthorName(author) {
+  author = author.trim();
+  const firstName = author.slice(0, author.indexOf(' '));
+  let lastName = '';
+  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+    lastName = author.slice(author.indexOf(' ') + 1, author.length);
+  } else {
+    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+  }
+  const capitalFirstName =
+    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+  const capitalLastName =
+    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+
+  return capitalFirstName + ' ' + capitalLastName;
+}
+
+function logBook(title) {
+  title = title.toLowerCase();
+  if (title.startsWith('computer')) {
+    console.log('it computer book');
+  } else if (title.includes('algo') && title.includes('structure')) {
+    console.log('this is DS book');
+  } else if (
+    (title.endWith('system') || title.endswith('systems')) &&
+    !title.includes('oop')
+  ) {
+    console.log('hello');
+  }
+}
