@@ -886,33 +886,65 @@ const books = [
 // };
 // console.log(isContributor('Julie Sussman (Contributor)'));
 
-function normalizeAuthorName(author) {
-  author = author.trim();
-  const firstName = author.slice(0, author.indexOf(' '));
-  let lastName = '';
-  if (author.indexOf(' ') === author.lastIndexOf(' ')) {
-    lastName = author.slice(author.indexOf(' ') + 1, author.length);
-  } else {
-    lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
-  }
-  const capitalFirstName =
-    firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
-  const capitalLastName =
-    lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
+// function normalizeAuthorName(author) {
+//   author = author.trim();
+//   const firstName = author.slice(0, author.indexOf(' '));
+//   let lastName = '';
+//   if (author.indexOf(' ') === author.lastIndexOf(' ')) {
+//     lastName = author.slice(author.indexOf(' ') + 1, author.length);
+//   } else {
+//     lastName = author.slice(author.indexOf(' ') + 1, author.lastIndexOf(' '));
+//   }
+//   const capitalFirstName =
+//     firstName[0].toUpperCase() + firstName.slice(1).toLowerCase();
+//   const capitalLastName =
+//     lastName[0].toUpperCase() + lastName.slice(1).toLowerCase();
 
-  return capitalFirstName + ' ' + capitalLastName;
-}
+//   return capitalFirstName + ' ' + capitalLastName;
+// }
 
-function logBook(title) {
-  title = title.toLowerCase();
-  if (title.startsWith('computer')) {
-    console.log('it computer book');
-  } else if (title.includes('algo') && title.includes('structure')) {
-    console.log('this is DS book');
-  } else if (
-    (title.endWith('system') || title.endswith('systems')) &&
-    !title.includes('oop')
-  ) {
-    console.log('hello');
+// function logBook(title) {
+//   title = title.toLowerCase();
+//   if (title.startsWith('computer')) {
+//     console.log('it computer book');
+//   } else if (title.includes('algo') && title.includes('structure')) {
+//     console.log('this is DS book');
+//   } else if (
+//     (title.endWith('system') || title.endswith('systems')) &&
+//     !title.includes('oop')
+//   ) {
+//     console.log('hello');
+//   }
+// }
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split('_');
+
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
+});
+
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  const output = `${type.startsWith('_Delayed') ? '**' : ''} ${type.replaceAll(
+    '_',
+    ' '
+  )} ${from.slice(0, 3).toUpperCase()} ${to
+    .slice(0, 3)
+    .toUpperCase()} (${time.replace(':', 'h')})`;
+  console.log(output);
 }
