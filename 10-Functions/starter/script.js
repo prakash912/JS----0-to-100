@@ -13,3 +13,18 @@ const addBooking = function (seat, passenger = 1, price = 99) {
 };
 addBooking(5);
 addBooking(5, 55);
+
+const flight = 'LS121';
+const passenger = {
+  name: 'Rahul',
+  passNo: 122333,
+};
+
+const checkIn = (flightNo, passengerData) => {
+  flightNo = 'PRR123';
+  passengerData.name = 'Prakash';
+};
+
+checkIn(flight, passenger);
+console.log(flight);
+console.log(passenger);
