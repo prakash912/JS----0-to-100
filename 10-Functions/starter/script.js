@@ -29,27 +29,44 @@
 // console.log(flight);
 // console.log(passenger);
 
-const oneWord = str => {
-  return str.replace(/ /g, '').toLowerCase();
-};
+// const oneWord = str => {
+//   return str.replace(/ /g, '').toLowerCase();
+// };
 
-const upperFirstWord = str => {
-  const [first, ...other] = str.split(' ');
-  return [first.toUpperCase(), ...other].join(' ');
-};
+// const upperFirstWord = str => {
+//   const [first, ...other] = str.split(' ');
+//   return [first.toUpperCase(), ...other].join(' ');
+// };
 
-const transformer = (str, fn) => {
-  console.log(`Orignal String: ${str}`);
-  console.log(`Transformed Strign: ${fn(str)}`);
-  console.log(`Transformed by ${fn.name}`);
-};
+// const transformer = (str, fn) => {
+//   console.log(`Orignal String: ${str}`);
+//   console.log(`Transformed Strign: ${fn(str)}`);
+//   console.log(`Transformed by ${fn.name}`);
+// };
 
-transformer('Javascript is backbone', oneWord);
-transformer('Javascript is backbone', upperFirstWord);
+// transformer('Javascript is backbone', oneWord);
+// transformer('Javascript is backbone', upperFirstWord);
 
-const high5 = function () {
-  console.log('prakash try his best to improve in each and every field');
-};
+// const high5 = function () {
+//   console.log('prakash try his best to improve in each and every field');
+// };
 
-document.body.addEventListener('click', high5);
-['prAKASH', 'RANJAN', 'rai'].forEach(high5);
+// document.body.addEventListener('click', high5);
+// ['prAKASH', 'RANJAN', 'rai'].forEach(high5);
+
+// function return function
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+// greet('Namaste')('Prakash G');
+
+//write same function by using Arrow
+
+const greet = greeting => name =>
+  console.log(`${greeting} ${name} by Arrow function`);
+
+greet('Namaste')('Prakash G');
