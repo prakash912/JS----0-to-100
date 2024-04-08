@@ -66,7 +66,42 @@
 
 //write same function by using Arrow
 
-const greet = greeting => name =>
-  console.log(`${greeting} ${name} by Arrow function`);
+// const greet = greeting => name =>
+//   console.log(`${greeting} ${name} by Arrow function`);
 
-greet('Namaste')('Prakash G');
+// greet('Namaste')('Prakash G');
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  // book: function() {}
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+// lufthansa.book(239, 'Jonas Schmedtmann');
+// lufthansa.book(635, 'John Smith');
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'LX',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+book.call(swiss, 9120, 'xoxo');
+
+const flightData = [99, 'hello'];
+book.apply(swiss, flightData);
