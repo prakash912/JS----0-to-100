@@ -105,3 +105,25 @@ book.call(swiss, 9120, 'xoxo');
 
 const flightData = [99, 'hello'];
 book.apply(swiss, flightData);
+
+const bindFirst = book.bind(swiss);
+// bindFirst(123, 'bind');
+lufthansa.buyPlane = function () {
+  console.log(this);
+};
+
+console.log(
+  document
+    .querySelector('.buy')
+    .addEventListener('click', lufthansa.buyPlane.bind(lufthansa))
+);
+
+const addTax = rate => {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+
+const addVat = addTax(0.25);
+
+console.log(addVat(10));
