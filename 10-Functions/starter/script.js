@@ -159,3 +159,8 @@ const poll = {
 document
   .querySelector('.poll')
   .addEventListener('click', poll.registerNewUser.bind(poll));
+
+// IIFE
+(function () {
+  console.log('heeloo Prakash gg');
+})();
