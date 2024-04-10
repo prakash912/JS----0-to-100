@@ -127,40 +127,61 @@
 // const addVat = addTax(0.25);
 
 // console.log(addVat(10));
-const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  // This generates [0, 0, 0, 0]. More in the next section 😃
-  answers: new Array(4).fill(0),
-  registerNewUser() {
-    const answer = Number(
-      prompt(`${this.question}\n${this.options.join('\n')}\n(Write Option No)`)
-    );
-    console.log(answer);
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+//   // This generates [0, 0, 0, 0]. More in the next section 😃
+//   answers: new Array(4).fill(0),
+//   registerNewUser() {
+//     const answer = Number(
+//       prompt(`${this.question}\n${this.options.join('\n')}\n(Write Option No)`)
+//     );
+//     console.log(answer);
 
-    typeof answer === 'number' &&
-      answer < this.answers.length &&
-      this.answers[answer]++;
+//     typeof answer === 'number' &&
+//       answer < this.answers.length &&
+//       this.answers[answer]++;
 
-    console.log(this.answers);
+//     console.log(this.answers);
 
-    this.displayResults();
-    this.displayResults('string');
-  },
-  displayResults(type = 'array') {
-    if (type === 'array') {
-      console.log(this.answers);
-    } else if (type === 'string') {
-      console.log(`Poll Results are ${this.answers.join(', ')}`);
-    }
-  },
+//     this.displayResults();
+//     this.displayResults('string');
+//   },
+//   displayResults(type = 'array') {
+//     if (type === 'array') {
+//       console.log(this.answers);
+//     } else if (type === 'string') {
+//       console.log(`Poll Results are ${this.answers.join(', ')}`);
+//     }
+//   },
+// };
+
+// document
+//   .querySelector('.poll')
+//   .addEventListener('click', poll.registerNewUser.bind(poll));
+
+// // IIFE
+// (function () {
+//   console.log('heeloo Prakash gg');
+// })();
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
 };
 
-document
-  .querySelector('.poll')
-  .addEventListener('click', poll.registerNewUser.bind(poll));
+const z = function () {
+  const y = 2;
+  f = function () {
+    console.log(y * 2);
+  };
+};
 
-// IIFE
-(function () {
-  console.log('heeloo Prakash gg');
-})();
+g();
+f();
+
+z();
+f();
