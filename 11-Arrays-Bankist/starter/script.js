@@ -77,6 +77,7 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 //slice
 const arr = ['prakash', 'rahaul', 'mohan'];
+console.log(arr.at(-1));
 const arr2 = ['ram', 'janki', 'hanuman'];
 console.log(arr.concat(arr2).join('<-->'));
 console.log(arr.slice(1, 2));
