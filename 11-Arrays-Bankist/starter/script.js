@@ -84,3 +84,11 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(arr);
 // console.log(arr.splice(1, 2));
 // console.log(arr);
+
+movements.forEach(function (movement, index, array) {
+  if (movement > 0) {
+    console.log(`you credit ${index}:${movement}`);
+  } else {
+    console.log(`you devit at ${index}:${movement}`);
+  }
+});
