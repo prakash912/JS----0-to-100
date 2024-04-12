@@ -71,7 +71,14 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = new Set(['eloo', 'peelo']);
+movements.forEach(function (value, key) {
+  console.log(`${value} :${key}`);
+});
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key} --> ${value}`);
+});
 
 /////////////////////////////////////////////////
 
@@ -85,10 +92,10 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(arr.splice(1, 2));
 // console.log(arr);
 
-movements.forEach(function (movement, index, array) {
-  if (movement > 0) {
-    console.log(`you credit ${index}:${movement}`);
-  } else {
-    console.log(`you devit at ${index}:${movement}`);
-  }
-});
+// movements.forEach(function (movement, index, array) {
+//   if (movement > 0) {
+//     console.log(`you credit ${index}:${movement}`);
+//   } else {
+//     console.log(`you devit at ${index}:${movement}`);
+//   }
+// });
