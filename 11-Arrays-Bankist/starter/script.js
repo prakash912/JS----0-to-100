@@ -63,6 +63,26 @@ const inputClosePin = document.querySelector('.form__input--pin');
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+
+const displayMovments = function (movements) {
+  containerMovements.innerHTML = '';
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+
+    const html = `
+    <div class="movements__row">
+    <div class="movements__type movements__type--${type}">
+    ${i + 1}  ${type}
+    </div>
+    <div class="movments__value">${mov}</div>
+    </div>
+    `;
+
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
+
+displayMovments(account1.movements);
 // LECTURES
 
 const currencies = new Map([
@@ -71,14 +91,14 @@ const currencies = new Map([
   ['GBP', 'Pound sterling'],
 ]);
 
-const movements = new Set(['eloo', 'peelo']);
-movements.forEach(function (value, key) {
-  console.log(`${value} :${key}`);
-});
+// const movements = new Set(['eloo', 'peelo']);
+// movements.forEach(function (value, key) {
+//   console.log(`${value} :${key}`);
+// });
 
-currencies.forEach(function (value, key, map) {
-  console.log(`${key} --> ${value}`);
-});
+// currencies.forEach(function (value, key, map) {
+//   console.log(`${key} --> ${value}`);
+// });
 
 /////////////////////////////////////////////////
 
