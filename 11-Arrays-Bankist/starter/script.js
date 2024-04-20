@@ -160,3 +160,26 @@ const usdMov = account1.movements.map(cur => {
   return cur * 1.1;
 });
 console.log(usdMov, 'usdMov');
+
+const user = 'Prakash The Great';
+
+const createUsserName = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('')
+      .toUpperCase();
+  });
+};
+createUsserName(accounts);
+console.log(accounts, 'sd');
+
+// const username = user
+//   .toLowerCase()
+//   .split(' ')
+//   .map(name => name[0])
+//   .join('')
+//   .toUpperCase();
+// console.log(username, 'useranme');
