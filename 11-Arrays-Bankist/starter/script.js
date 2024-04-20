@@ -140,18 +140,23 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const checkDogs = function (dogJulia, dogKate) {
-  const correctJuliaDog = dogJulia.slice();
-  correctJuliaDog.splice(0, 1);
-  correctJuliaDog.splice(0, -2);
+// const checkDogs = function (dogJulia, dogKate) {
+//   const correctJuliaDog = dogJulia.slice();
+//   correctJuliaDog.splice(0, 1);
+//   correctJuliaDog.splice(0, -2);
 
-  const dogs = correctJuliaDog.concat(dogKate);
-  dogs.forEach(function (dog, i) {
-    if (dog > 3) {
-      console.log(`Dog number ${i} is an adult, and is ${dog} years old`);
-    } else {
-      console.log(`Dog number ${i} is still a puppy 🐶`);
-    }
-  });
-};
-checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+//   const dogs = correctJuliaDog.concat(dogKate);
+//   dogs.forEach(function (dog, i) {
+//     if (dog > 3) {
+//       console.log(`Dog number ${i} is an adult, and is ${dog} years old`);
+//     } else {
+//       console.log(`Dog number ${i} is still a puppy 🐶`);
+//     }
+//   });
+// };
+// checkDogs([9, 16, 6, 8, 3], [10, 5, 6, 1, 4]);
+
+const usdMov = account1.movements.map(cur => {
+  return cur * 1.1;
+});
+console.log(usdMov, 'usdMov');
